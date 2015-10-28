@@ -5,7 +5,7 @@
 
 namespace SprykerFeature\Zed\ProductSearch\Persistence\Propel;
 
-use SprykerFeature\Zed\ProductSearch\Persistence\Propel\Base\SpyProductSearchAttributesOperationQuery as BaseSpyProductSearchAttributesOperationQuery;
+use Orm\Zed\ProductSearch\Persistence\Base\SpyProductSearchAttributesOperationQuery as BaseSpyProductSearchAttributesOperationQuery;
 
 /**
  * Skeleton subclass for performing query and update operations on the 'spy_product_search_attributes_operation' table.
@@ -17,7 +17,7 @@ use SprykerFeature\Zed\ProductSearch\Persistence\Propel\Base\SpyProductSearchAtt
  * long as it does not already exist in the output directory.
  *
  */
-class SpyProductSearchAttributesOperationQuery extends BaseSpyProductSearchAttributesOperationQuery
+abstract class AbstractSpyProductSearchAttributesOperationQuery extends BaseSpyProductSearchAttributesOperationQuery
 {
 
 } // SpyProductSearchAttributesOperationQuery
