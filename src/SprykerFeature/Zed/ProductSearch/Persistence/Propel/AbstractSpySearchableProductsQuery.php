@@ -5,7 +5,7 @@
 
 namespace SprykerFeature\Zed\ProductSearch\Persistence\Propel;
 
-use SprykerFeature\Zed\ProductSearch\Persistence\Propel\Base\SpySearchableProductsQuery as BaseSpySearchableProductsQuery;
+use Orm\Zed\ProductSearch\Persistence\Base\SpySearchableProductsQuery as BaseSpySearchableProductsQuery;
 
 /**
  * Skeleton subclass for performing query and update operations on the 'spy_searchable_products' table.
@@ -17,7 +17,7 @@ use SprykerFeature\Zed\ProductSearch\Persistence\Propel\Base\SpySearchableProduc
  * long as it does not already exist in the output directory.
  *
  */
-class SpySearchableProductsQuery extends BaseSpySearchableProductsQuery
+abstract class AbstractSpySearchableProductsQuery extends BaseSpySearchableProductsQuery
 {
 
 } // SpySearchableProductsQuery
