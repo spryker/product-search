@@ -37,7 +37,7 @@ use Spryker\Zed\ProductSearch\ProductSearchDependencyProvider;
 /**
  * @method ProductSearchConfig getConfig()
  */
-class ProductSearchDependencyContainer extends AbstractBusinessFactory
+class ProductSearchBusinessFactory extends AbstractBusinessFactory
 {
 
     /**
