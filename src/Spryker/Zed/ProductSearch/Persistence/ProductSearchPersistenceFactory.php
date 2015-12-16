@@ -9,7 +9,7 @@ namespace Spryker\Zed\ProductSearch\Persistence;
 use Spryker\Zed\Kernel\Persistence\AbstractPersistenceFactory;
 use Spryker\Zed\Product\Persistence\ProductQueryContainerInterface;
 
-class ProductSearchDependencyContainer extends AbstractPersistenceFactory
+class ProductSearchPersistenceFactory extends AbstractPersistenceFactory
 {
 
     /**

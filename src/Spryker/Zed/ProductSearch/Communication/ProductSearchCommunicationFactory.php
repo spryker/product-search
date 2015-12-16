@@ -10,7 +10,7 @@ use Spryker\Zed\Kernel\Communication\AbstractCommunicationFactory;
 use Spryker\Zed\ProductSearch\Business\ProductSearchFacade;
 use Spryker\Zed\ProductSearch\Persistence\ProductSearchQueryContainerInterface;
 
-class ProductSearchDependencyContainer extends AbstractCommunicationFactory
+class ProductSearchCommunicationFactory extends AbstractCommunicationFactory
 {
 
     /**
