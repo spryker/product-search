@@ -5,23 +5,23 @@
  * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
  */
 
-namespace Spryker\Zed\ProductSearch\Communication\Plugin;
+namespace Spryker\Zed\ProductSearch\Communication\Controller;
 
-use Spryker\Zed\Installer\Communication\Plugin\AbstractInstallerPlugin;
+use Spryker\Zed\Application\Communication\Controller\AbstractController;
 
 /**
  * @method \Spryker\Zed\ProductSearch\Communication\ProductSearchCommunicationFactory getFactory()
  * @method \Spryker\Zed\ProductSearch\Business\ProductSearchFacade getFacade()
  */
-class Installer extends AbstractInstallerPlugin
+class FilterPreferencesController extends AbstractController
 {
 
     /**
-     * @return void
+     * @return array
      */
-    protected function install()
+    public function indexAction()
     {
-        $this->getFacade()->install($this->messenger);
+        return $this->viewResponse([]);
     }
 
 }

@@ -7,10 +7,10 @@
 
 namespace Spryker\Zed\ProductSearch\Persistence\Propel;
 
-use Orm\Zed\ProductSearch\Persistence\Base\SpyProductSearchAttributesOperationQuery as BaseSpyProductSearchAttributesOperationQuery;
+use Orm\Zed\ProductSearch\Persistence\Base\SpyProductSearchAttributeMap as BaseSpyProductSearchAttributeMap;
 
 /**
- * Skeleton subclass for performing query and update operations on the 'spy_product_search_attributes_operation' table.
+ * Skeleton subclass for representing a row from the 'spy_product_search_attribute_map' table.
  *
  *
  *
@@ -18,6 +18,6 @@ use Orm\Zed\ProductSearch\Persistence\Base\SpyProductSearchAttributesOperationQu
  * application requirements. This class will only be generated as
  * long as it does not already exist in the output directory.
  */
-abstract class AbstractSpyProductSearchAttributesOperationQuery extends BaseSpyProductSearchAttributesOperationQuery
+abstract class SpyProductSearchAttributeMap extends BaseSpyProductSearchAttributeMap
 {
 }
