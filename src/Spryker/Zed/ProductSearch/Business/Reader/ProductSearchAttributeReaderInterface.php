@@ -5,35 +5,13 @@
  * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
  */
 
-namespace Spryker\Zed\ProductSearch\Persistence;
+namespace Spryker\Zed\ProductSearch\Business\Reader;
 
 use Generated\Shared\Transfer\ProductSearchAttributeCollectionTransfer;
 use Generated\Shared\Transfer\ProductSearchAttributeCriteriaTransfer;
 
-interface ProductSearchRepositoryInterface
+interface ProductSearchAttributeReaderInterface
 {
-    /**
-     * Result format:
-     * [
-     *     $idProduct => [$idLocale => $count],
-     *     ...,
-     * ]
-     *
-     * @param array<int> $productIds
-     * @param array<int> $localeIds
-     *
-     * @return array<int, array<int, int>>
-     */
-    public function getProductSearchEntitiesCountGroupedByIdProductAndIdLocale(
-        array $productIds,
-        array $localeIds
-    ): array;
-
-    /**
-     * @return array<string>
-     */
-    public function getAllProductAttributeKeys(): array;
-
     /**
      * @param \Generated\Shared\Transfer\ProductSearchAttributeCriteriaTransfer $productSearchAttributeCriteriaTransfer
      *
