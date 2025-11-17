@@ -49,3 +49,7 @@ Translations,Translations
 "Deactivate all","Deactivate all"
 "Create Filter","Create Filter"
 "Edit filter","Edit filter"
+"At least one concrete has searchable flag in locales","At least one concrete has searchable flag in locales"
+"No concrete has searchable flag in locales","No concrete has searchable flag in locales"
+"Has searchable flag in locales","Has searchable flag in locales"
+"No searchable flag in locales","No searchable flag in locales"

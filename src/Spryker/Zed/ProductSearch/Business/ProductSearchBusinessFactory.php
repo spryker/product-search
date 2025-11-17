@@ -28,6 +28,10 @@ use Spryker\Zed\ProductSearch\Business\Marker\ProductSearchMarker;
 use Spryker\Zed\ProductSearch\Business\Model\ProductAbstractSearchReader;
 use Spryker\Zed\ProductSearch\Business\Model\ProductConcreteSearchReader;
 use Spryker\Zed\ProductSearch\Business\Model\ProductSearchWriter;
+use Spryker\Zed\ProductSearch\Business\Provider\ProductReadiness\IsSearchableForLocaleAbstractProductReadinessProvider;
+use Spryker\Zed\ProductSearch\Business\Provider\ProductReadiness\IsSearchableForLocaleConcreteProductReadinessProvider;
+use Spryker\Zed\ProductSearch\Business\Provider\ProductReadiness\ProductAbstractReadinessProviderInterface;
+use Spryker\Zed\ProductSearch\Business\Provider\ProductReadiness\ProductConcreteReadinessProviderInterface;
 use Spryker\Zed\ProductSearch\Business\Reader\ProductSearchAttributeReader;
 use Spryker\Zed\ProductSearch\Business\Reader\ProductSearchAttributeReaderInterface;
 use Spryker\Zed\ProductSearch\Business\Transfer\ProductAttributeTransferMapper;
@@ -344,5 +348,15 @@ class ProductSearchBusinessFactory extends AbstractBusinessFactory
             $this->createProductSearchConfigExtensionCollector(),
             $this->getCollectorFacade(),
         );
+    }
+
+    public function createIsSearchableForLocaleAbstractProductReadinessProvider(): ProductAbstractReadinessProviderInterface
+    {
+        return new IsSearchableForLocaleAbstractProductReadinessProvider();
+    }
+
+    public function createIsSearchableForLocaleConcreteProductReadinessProvider(): ProductConcreteReadinessProviderInterface
+    {
+        return new IsSearchableForLocaleConcreteProductReadinessProvider();
     }
 }

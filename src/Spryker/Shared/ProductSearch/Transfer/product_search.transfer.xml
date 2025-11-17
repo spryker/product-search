@@ -119,4 +119,14 @@
         <property name="key" type="string"/>
     </transfer>
 
+    <transfer name="ProductConcreteReadinessRequest" strict="true">
+        <property name="productConcrete" type="ProductConcrete"/>
+    </transfer>
+
+    <transfer name="ProductAbstractReadinessRequest" strict="true">
+    </transfer>
+
+    <transfer name="ProductReadiness" strict="true">
+    </transfer>
+
 </transfers>

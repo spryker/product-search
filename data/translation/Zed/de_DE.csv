@@ -49,3 +49,7 @@ Translations,Übersetzungen
 "Deactivate all","Alle deaktivieren"
 "Create Filter","Filter Erstellen"
 "Edit filter","Filter Bearbeiten"
+"At least one concrete has searchable flag in locales","Mindestens eine Variante hat suchbares Flag in Sprachen"
+"No concrete has searchable flag in locales","Keine Variante hat suchbares Flag in Sprachen"
+"Has searchable flag in locales","Hat suchbares Flag in Sprachen"
+"No searchable flag in locales","Kein suchbares Flag in Sprachen"
