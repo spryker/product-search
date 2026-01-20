@@ -9,6 +9,7 @@ namespace Spryker\Zed\ProductSearch\Persistence;
 
 use Generated\Shared\Transfer\ProductSearchAttributeCollectionTransfer;
 use Generated\Shared\Transfer\ProductSearchAttributeCriteriaTransfer;
+use Generated\Shared\Transfer\ProductSearchCriteriaTransfer;
 
 interface ProductSearchRepositoryInterface
 {
@@ -42,4 +43,11 @@ interface ProductSearchRepositoryInterface
     public function getProductSearchAttributeCollection(
         ProductSearchAttributeCriteriaTransfer $productSearchAttributeCriteriaTransfer
     ): ProductSearchAttributeCollectionTransfer;
+
+    /**
+     * @param \Generated\Shared\Transfer\ProductSearchCriteriaTransfer $productSearchCriteriaTransfer
+     *
+     * @return array<\Generated\Shared\Transfer\ProductSearchTransfer>
+     */
+    public function getProductSearchEntityByCriteria(ProductSearchCriteriaTransfer $productSearchCriteriaTransfer): array;
 }

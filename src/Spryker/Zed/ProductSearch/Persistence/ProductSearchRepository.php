@@ -10,6 +10,8 @@ namespace Spryker\Zed\ProductSearch\Persistence;
 use ArrayObject;
 use Generated\Shared\Transfer\ProductSearchAttributeCollectionTransfer;
 use Generated\Shared\Transfer\ProductSearchAttributeCriteriaTransfer;
+use Generated\Shared\Transfer\ProductSearchCriteriaTransfer;
+use Generated\Shared\Transfer\ProductSearchTransfer;
 use Orm\Zed\Product\Persistence\Map\SpyProductAttributeKeyTableMap;
 use Orm\Zed\ProductSearch\Persistence\Map\SpyProductSearchTableMap;
 use Orm\Zed\ProductSearch\Persistence\SpyProductSearchAttributeQuery;
@@ -145,5 +147,31 @@ class ProductSearchRepository extends AbstractRepository implements ProductSearc
         }
 
         return $modelCriteria;
+    }
+
+    /**
+     * @param \Generated\Shared\Transfer\ProductSearchCriteriaTransfer $productSearchCriteriaTransfer
+     *
+     * @return array<\Generated\Shared\Transfer\ProductSearchTransfer>
+     */
+    public function getProductSearchEntityByCriteria(ProductSearchCriteriaTransfer $productSearchCriteriaTransfer): array
+    {
+        $productSearchQuery = $this->getFactory()
+            ->createProductSearchQuery();
+
+        if ($productSearchCriteriaTransfer->getOffset() !== null) {
+            $productSearchQuery->offset($productSearchCriteriaTransfer->getOffset());
+        }
+        if ($productSearchCriteriaTransfer->getLimit() !== null && $productSearchCriteriaTransfer->getLimit() > 0) {
+            $productSearchQuery->limit($productSearchCriteriaTransfer->getLimit());
+        }
+
+        $productSearchEntities = $productSearchQuery->find();
+        $result = [];
+        foreach ($productSearchEntities as $productSearchEntity) {
+            $result[] = (new ProductSearchTransfer())->fromArray($productSearchEntity->toArray(), true);
+        }
+
+        return $result;
     }
 }

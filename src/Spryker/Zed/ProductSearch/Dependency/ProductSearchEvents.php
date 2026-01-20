@@ -98,4 +98,12 @@ interface ProductSearchEvents
      * @var string
      */
     public const ENTITY_SPY_PRODUCT_SEARCH_DELETE = 'Entity.spy_product_search.delete';
+
+    /**
+     * Specification:
+     * - Resource name for Product Search.
+     *
+     * @api
+     */
+    public const string PRODUCT_SEARCH_RESOURCE_NAME = 'product_search';
 }

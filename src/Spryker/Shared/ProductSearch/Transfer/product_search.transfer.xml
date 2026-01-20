@@ -105,6 +105,18 @@
         <property name="sortCollection" type="Sort[]" singular="sort"/>
     </transfer>
 
+    <transfer name="ProductSearchCriteria" strict="true">
+        <property name="limit" type="int"/>
+        <property name="offset" type="int"/>
+    </transfer>
+
+    <transfer name="ProductSearch" strict="true">
+        <property name="idProductSearch" type="int"/>
+        <property name="isSearchable" type="bool"/>
+        <property name="fkProduct" type="int"/>
+        <property name="fkLocale" type="int"/>
+    </transfer>
+
     <transfer name="ProductSearchAttributeConditions" strict="true">
         <property name="productSearchAttributeIds" type="int[]" singular="idProductSearchAttribute"/>
         <property name="withLocalizedAttributes" type="bool"/>
