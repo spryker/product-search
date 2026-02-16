@@ -15,7 +15,6 @@ use Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductAbstractRead
 /**
  * @method \Spryker\Zed\ProductSearch\Business\ProductSearchFacadeInterface getFacade()
  * @method \Spryker\Zed\ProductSearch\Business\ProductSearchBusinessFactory getBusinessFactory()
- * @method \Spryker\Zed\ProductSearch\Communication\ProductSearchBusinessFactory getFactory()
  * @method \Spryker\Zed\ProductSearch\ProductSearchConfig getConfig()
  */
 class IsSearchableForLocaleAbstractProductReadinessProviderPlugin extends AbstractPlugin implements ProductAbstractReadinessProviderPluginInterface

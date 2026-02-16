@@ -68,7 +68,7 @@ class LocalizedProductSearchAttributeKeyExpander implements LocalizedProductSear
     }
 
     /**
-     * @param list<\Generated\Shared\Transfer\LocaleTransfer> $localeTransfers
+     * @param array<\Generated\Shared\Transfer\LocaleTransfer> $localeTransfers
      * @param array<int, array<string, string>> $translationsIndexedByKeyAndLocale
      * @param \Generated\Shared\Transfer\ProductSearchAttributeTransfer $productSearchAttributeTransfer
      *
@@ -93,7 +93,7 @@ class LocalizedProductSearchAttributeKeyExpander implements LocalizedProductSear
     }
 
     /**
-     * @param list<\Generated\Shared\Transfer\TranslationTransfer> $translationTransfers
+     * @param array<\Generated\Shared\Transfer\TranslationTransfer> $translationTransfers
      *
      * @return array<int, array<string, string>>
      */

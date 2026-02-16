@@ -105,9 +105,9 @@ class ProductSearchToGlossaryBridge implements ProductSearchToGlossaryInterface
 
     /**
      * @param list<string> $glossaryKeys
-     * @param list<\Generated\Shared\Transfer\LocaleTransfer> $localeTransfers
+     * @param array<\Generated\Shared\Transfer\LocaleTransfer> $localeTransfers
      *
-     * @return list<\Generated\Shared\Transfer\TranslationTransfer>
+     * @return array<\Generated\Shared\Transfer\TranslationTransfer>
      */
     public function getTranslationsByGlossaryKeysAndLocaleTransfers(array $glossaryKeys, array $localeTransfers): array
     {
