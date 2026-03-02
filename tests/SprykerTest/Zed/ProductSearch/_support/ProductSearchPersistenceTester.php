@@ -29,11 +29,6 @@ class ProductSearchPersistenceTester extends Actor
 {
     use _generated\ProductSearchPersistenceTesterActions;
 
-    /**
-     * @param string $filterType
-     *
-     * @return \Orm\Zed\ProductSearch\Persistence\SpyProductSearchAttribute
-     */
     public function createProductSearchAttribute(string $filterType): SpyProductSearchAttribute
     {
         $productAttributeKey = new SpyProductAttributeKey();

@@ -33,20 +33,11 @@ class ProductSearchBusinessTester extends Actor
 {
     use _generated\ProductSearchBusinessTesterActions;
 
-    /**
-     * @return void
-     */
     public function ensureProductAttributeKeyTableIsEmpty(): void
     {
         $this->ensureDatabaseTableIsEmpty($this->createProductAttributeKeyQuery());
     }
 
-    /**
-     * @param array $productAttributeKeySeedData
-     * @param array $productSearchAttributeSeedData
-     *
-     * @return \Generated\Shared\Transfer\ProductSearchAttributeTransfer
-     */
     public function haveProductSearchAttribute(
         array $productAttributeKeySeedData = [],
         array $productSearchAttributeSeedData = []
@@ -64,13 +55,6 @@ class ProductSearchBusinessTester extends Actor
         return (new ProductSearchAttributeTransfer())->fromArray($productSearchAttributeEntity->toArray(), true);
     }
 
-    /**
-     * @param string $glossaryKey
-     * @param \Generated\Shared\Transfer\LocaleTransfer $localeTransfer
-     * @param string $translation
-     *
-     * @return void
-     */
     public function addProductSearchKeyTranslation(
         string $glossaryKey,
         LocaleTransfer $localeTransfer,
@@ -86,9 +70,6 @@ class ProductSearchBusinessTester extends Actor
         );
     }
 
-    /**
-     * @return \Orm\Zed\Product\Persistence\SpyProductAttributeKeyQuery
-     */
     protected function createProductAttributeKeyQuery(): SpyProductAttributeKeyQuery
     {
         return SpyProductAttributeKeyQuery::create();

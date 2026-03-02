@@ -23,10 +23,6 @@ abstract class AbstractProductSearchReader
      */
     protected $localeFacade;
 
-    /**
-     * @param \Spryker\Zed\ProductSearch\Persistence\ProductSearchQueryContainerInterface $productSearchQueryContainer
-     * @param \Spryker\Zed\ProductSearch\Dependency\Facade\ProductSearchToLocaleInterface $localeFacade
-     */
     public function __construct(ProductSearchQueryContainerInterface $productSearchQueryContainer, ProductSearchToLocaleInterface $localeFacade)
     {
         $this->productSearchQueryContainer = $productSearchQueryContainer;

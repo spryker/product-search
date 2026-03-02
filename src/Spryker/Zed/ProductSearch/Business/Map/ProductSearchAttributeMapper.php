@@ -78,13 +78,6 @@ class ProductSearchAttributeMapper implements ProductSearchAttributeMapperInterf
         return $pageMapTransfer;
     }
 
-    /**
-     * @param \Spryker\Zed\ProductPageSearchExtension\Dependency\PageMapBuilderInterface $pageMapBuilder
-     * @param \Generated\Shared\Transfer\PageMapTransfer $pageMapTransfer
-     * @param array $attributes
-     *
-     * @return \Generated\Shared\Transfer\PageMapTransfer
-     */
     public function mapDynamicProductAttributesToSearchData(
         ProductSearchExtensionPageMapBuilderInterface $pageMapBuilder,
         PageMapTransfer $pageMapTransfer,
@@ -97,14 +90,6 @@ class ProductSearchAttributeMapper implements ProductSearchAttributeMapperInterf
         return $pageMapTransfer;
     }
 
-    /**
-     * @param \Spryker\Zed\ProductSearch\Business\Map\Collector\ProductSearchAttributeMapCollectorInterface $attributeMapCollector
-     * @param \Spryker\Zed\ProductPageSearchExtension\Dependency\PageMapBuilderInterface $pageMapBuilder
-     * @param \Generated\Shared\Transfer\PageMapTransfer $pageMapTransfer
-     * @param array $attributes
-     *
-     * @return \Generated\Shared\Transfer\PageMapTransfer
-     */
     protected function executeAttributeMapCollector(
         ProductSearchAttributeMapCollectorInterface $attributeMapCollector,
         ProductSearchExtensionPageMapBuilderInterface $pageMapBuilder,

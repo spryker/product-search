@@ -42,11 +42,6 @@ abstract class AbstractAttributeMarker implements AttributeMarkerInterface
      */
     protected $productSearchQueryContainer;
 
-    /**
-     * @param \Spryker\Zed\ProductSearch\Dependency\Facade\ProductSearchToTouchInterface $touchFacade
-     * @param \Spryker\Zed\ProductSearch\Dependency\Facade\ProductSearchToEventFacadeInterface $eventFacade
-     * @param \Spryker\Zed\ProductSearch\Persistence\ProductSearchQueryContainerInterface $productSearchQuery
-     */
     public function __construct(
         ProductSearchToTouchInterface $touchFacade,
         ProductSearchToEventFacadeInterface $eventFacade,

@@ -11,11 +11,6 @@ use Generated\Shared\Transfer\ProductSearchAttributeCollectionTransfer;
 
 interface LocalizedProductSearchAttributeKeyExpanderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ProductSearchAttributeCollectionTransfer $productSearchAttributeCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductSearchAttributeCollectionTransfer
-     */
     public function expandProductSearchAttributeCollectionWithLocalizedKeys(
         ProductSearchAttributeCollectionTransfer $productSearchAttributeCollectionTransfer
     ): ProductSearchAttributeCollectionTransfer;

@@ -36,12 +36,6 @@ class ProductSearchAttributeMapper
         return $productSearchAttributeCollectionTransfer;
     }
 
-    /**
-     * @param \Orm\Zed\ProductSearch\Persistence\Base\SpyProductSearchAttribute $productSearchAttributeEntity
-     * @param \Generated\Shared\Transfer\ProductSearchAttributeTransfer $productSearchAttributeTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductSearchAttributeTransfer
-     */
     protected function mapProductSearchAttributeEntityToProductSearchAttributeTransfer(
         SpyProductSearchAttribute $productSearchAttributeEntity,
         ProductSearchAttributeTransfer $productSearchAttributeTransfer

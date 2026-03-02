@@ -22,9 +22,6 @@ class ProductSearchAttributeMapCollector implements ProductSearchAttributeMapCol
      */
     protected static $rawAttributeMap;
 
-    /**
-     * @param \Spryker\Zed\ProductSearch\Persistence\ProductSearchQueryContainerInterface $productSearchQueryContainer
-     */
     public function __construct(ProductSearchQueryContainerInterface $productSearchQueryContainer)
     {
         $this->productSearchQueryContainer = $productSearchQueryContainer;

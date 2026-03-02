@@ -45,13 +45,6 @@ class AttributeWriter implements AttributeWriterInterface
      */
     protected $glossaryKeyBuilder;
 
-    /**
-     * @param \Spryker\Zed\ProductSearch\Persistence\ProductSearchQueryContainerInterface $productSearchQueryContainer
-     * @param \Spryker\Zed\ProductSearch\Dependency\Facade\ProductSearchToProductInterface $productFacade
-     * @param \Spryker\Zed\ProductSearch\Dependency\Facade\ProductSearchToLocaleInterface $localeFacade
-     * @param \Spryker\Zed\ProductSearch\Dependency\Facade\ProductSearchToGlossaryInterface $glossaryFacade
-     * @param \Spryker\Shared\ProductSearch\Code\KeyBuilder\GlossaryKeyBuilderInterface $glossaryKeyBuilder
-     */
     public function __construct(
         ProductSearchQueryContainerInterface $productSearchQueryContainer,
         ProductSearchToProductInterface $productFacade,

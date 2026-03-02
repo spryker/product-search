@@ -23,33 +23,18 @@ use SprykerTest\Zed\ProductSearch\ProductSearchPresentationTester;
  */
 class FilterPreferencesCest
 {
-    /**
-     * @param \SprykerTest\Zed\ProductSearch\ProductSearchPresentationTester $i
-     *
-     * @return void
-     */
     public function _before(ProductSearchPresentationTester $i): void
     {
         $i->amZed();
         $i->amLoggedInUser();
     }
 
-    /**
-     * @param \SprykerTest\Zed\ProductSearch\ProductSearchPresentationTester $i
-     *
-     * @return void
-     */
     public function showListOfFilters(ProductSearchPresentationTester $i): void
     {
         $i->amOnPage(FilterPreferencesPage::URL_LIST);
         $i->seeElement(FilterPreferencesPage::SELECTOR_FILTER_LIST);
     }
 
-    /**
-     * @param \SprykerTest\Zed\ProductSearch\ProductSearchPresentationTester $i
-     *
-     * @return void
-     */
     public function createEditAndRemoveFilter(ProductSearchPresentationTester $i): void
     {
         $id = $i->createFilter('foooooo_' . rand(1, 1000));

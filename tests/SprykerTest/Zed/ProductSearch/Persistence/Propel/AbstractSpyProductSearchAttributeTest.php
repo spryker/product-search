@@ -44,9 +44,6 @@ class AbstractSpyProductSearchAttributeTest extends Unit
      */
     protected $connection;
 
-    /**
-     * @return void
-     */
     public function setUp(): void
     {
         parent::setUp();
@@ -55,9 +52,6 @@ class AbstractSpyProductSearchAttributeTest extends Unit
         $this->connection = Propel::getConnection();
     }
 
-    /**
-     * @return void
-     */
     public function testPreInsertWithoutPositionShouldSetPosition(): void
     {
         // Arrange
@@ -73,9 +67,6 @@ class AbstractSpyProductSearchAttributeTest extends Unit
         $this->assertEquals($expectedPosition, $this->spyProductSearchAttribute->getPosition());
     }
 
-    /**
-     * @return void
-     */
     public function testPreInsertWithPositionShouldSkipSetPosition(): void
     {
         // Arrange

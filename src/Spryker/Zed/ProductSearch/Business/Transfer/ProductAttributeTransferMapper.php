@@ -32,11 +32,6 @@ class ProductAttributeTransferMapper implements ProductAttributeTransferMapperIn
      */
     protected $glossaryKeyBuilder;
 
-    /**
-     * @param \Spryker\Zed\ProductSearch\Dependency\Facade\ProductSearchToLocaleInterface $localeFacade
-     * @param \Spryker\Zed\ProductSearch\Dependency\Facade\ProductSearchToGlossaryInterface $glossaryFacade
-     * @param \Spryker\Shared\ProductSearch\Code\KeyBuilder\GlossaryKeyBuilderInterface $glossaryKeyBuilder
-     */
     public function __construct(
         ProductSearchToLocaleInterface $localeFacade,
         ProductSearchToGlossaryInterface $glossaryFacade,

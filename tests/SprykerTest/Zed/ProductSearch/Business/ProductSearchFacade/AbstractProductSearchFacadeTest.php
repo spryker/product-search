@@ -41,9 +41,6 @@ abstract class AbstractProductSearchFacadeTest extends Unit
      */
     protected $productFacade;
 
-    /**
-     * @return void
-     */
     public function setUp(): void
     {
         parent::setUp();
@@ -52,11 +49,6 @@ abstract class AbstractProductSearchFacadeTest extends Unit
         $this->productFacade = new ProductFacade();
     }
 
-    /**
-     * @param string $key
-     *
-     * @return \Orm\Zed\Product\Persistence\SpyProductAttributeKey
-     */
     protected function createProductAttributeKeyEntity(string $key): SpyProductAttributeKey
     {
         $productAttributeKeyEntity = new SpyProductAttributeKey();
@@ -66,14 +58,6 @@ abstract class AbstractProductSearchFacadeTest extends Unit
         return $productAttributeKeyEntity;
     }
 
-    /**
-     * @param array $abstractAttrs
-     * @param array $abstractLocalizedAttrs
-     * @param array $concreteAttrs
-     * @param array $concreteLocalizedAttrs
-     *
-     * @return \Orm\Zed\Product\Persistence\SpyProductAbstract
-     */
     protected function createProduct(
         array $abstractAttrs,
         array $abstractLocalizedAttrs,

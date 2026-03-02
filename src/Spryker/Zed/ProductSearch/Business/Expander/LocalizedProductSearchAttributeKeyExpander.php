@@ -31,11 +31,6 @@ class LocalizedProductSearchAttributeKeyExpander implements LocalizedProductSear
      */
     protected GlossaryKeyBuilderInterface $glossaryKeyBuilder;
 
-    /**
-     * @param \Spryker\Zed\ProductSearch\Dependency\Facade\ProductSearchToLocaleInterface $localeFacade
-     * @param \Spryker\Zed\ProductSearch\Dependency\Facade\ProductSearchToGlossaryInterface $glossaryFacade
-     * @param \Spryker\Shared\ProductSearch\Code\KeyBuilder\GlossaryKeyBuilderInterface $glossaryKeyBuilder
-     */
     public function __construct(
         ProductSearchToLocaleInterface $localeFacade,
         ProductSearchToGlossaryInterface $glossaryFacade,
@@ -46,11 +41,6 @@ class LocalizedProductSearchAttributeKeyExpander implements LocalizedProductSear
         $this->glossaryKeyBuilder = $glossaryKeyBuilder;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductSearchAttributeCollectionTransfer $productSearchAttributeCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductSearchAttributeCollectionTransfer
-     */
     public function expandProductSearchAttributeCollectionWithLocalizedKeys(
         ProductSearchAttributeCollectionTransfer $productSearchAttributeCollectionTransfer
     ): ProductSearchAttributeCollectionTransfer {

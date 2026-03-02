@@ -18,9 +18,6 @@ class SearchPreferencesDataProvider
      */
     protected $productSearchQueryContainer;
 
-    /**
-     * @param \Spryker\Zed\ProductSearch\Persistence\ProductSearchQueryContainerInterface $productSearchQueryContainer
-     */
     public function __construct(ProductSearchQueryContainerInterface $productSearchQueryContainer)
     {
         $this->productSearchQueryContainer = $productSearchQueryContainer;

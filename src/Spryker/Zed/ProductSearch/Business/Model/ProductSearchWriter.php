@@ -26,10 +26,6 @@ class ProductSearchWriter implements ProductSearchWriterInterface
      */
     protected $productSearchQueryContainer;
 
-    /**
-     * @param \Spryker\Zed\ProductSearch\Business\Marker\ProductSearchMarkerInterface $productSearchMarker
-     * @param \Spryker\Zed\ProductSearch\Persistence\ProductSearchQueryContainerInterface $productSearchQueryContainer
-     */
     public function __construct(ProductSearchMarkerInterface $productSearchMarker, ProductSearchQueryContainerInterface $productSearchQueryContainer)
     {
         $this->productSearchMarker = $productSearchMarker;
@@ -50,11 +46,6 @@ class ProductSearchWriter implements ProductSearchWriterInterface
         });
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductConcreteTransfer $productConcreteTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductConcreteTransfer
-     */
     protected function executePersistProductSearchTransaction(ProductConcreteTransfer $productConcreteTransfer): ProductConcreteTransfer
     {
         $this->productSearchMarker->deactivateProductSearch(

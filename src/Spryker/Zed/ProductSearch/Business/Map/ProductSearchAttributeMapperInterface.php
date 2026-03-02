@@ -24,13 +24,6 @@ interface ProductSearchAttributeMapperInterface
      */
     public function mapDynamicProductAttributes(PageMapBuilderInterface $pageMapBuilder, PageMapTransfer $pageMapTransfer, array $attributes);
 
-    /**
-     * @param \Spryker\Zed\ProductPageSearchExtension\Dependency\PageMapBuilderInterface $pageMapBuilder
-     * @param \Generated\Shared\Transfer\PageMapTransfer $pageMapTransfer
-     * @param array $attributes
-     *
-     * @return \Generated\Shared\Transfer\PageMapTransfer
-     */
     public function mapDynamicProductAttributesToSearchData(
         ProductSearchExtensionPageMapBuilderInterface $pageMapBuilder,
         PageMapTransfer $pageMapTransfer,

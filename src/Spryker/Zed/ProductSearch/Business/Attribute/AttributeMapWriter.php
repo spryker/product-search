@@ -27,10 +27,6 @@ class AttributeMapWriter implements AttributeMapWriterInterface
      */
     protected $productFacade;
 
-    /**
-     * @param \Spryker\Zed\ProductSearch\Persistence\ProductSearchQueryContainerInterface $productSearchQueryContainer
-     * @param \Spryker\Zed\ProductSearch\Dependency\Facade\ProductSearchToProductInterface $productFacade
-     */
     public function __construct(
         ProductSearchQueryContainerInterface $productSearchQueryContainer,
         ProductSearchToProductInterface $productFacade

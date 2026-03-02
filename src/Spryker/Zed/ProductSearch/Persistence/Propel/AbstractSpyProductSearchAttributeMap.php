@@ -21,11 +21,6 @@ use Propel\Runtime\Connection\ConnectionInterface;
  */
 abstract class AbstractSpyProductSearchAttributeMap extends BaseSpyProductSearchAttributeMap
 {
-    /**
-     * @param \Propel\Runtime\Connection\ConnectionInterface|null $con
-     *
-     * @return bool
-     */
     public function preUpdate(?ConnectionInterface $con = null): bool
     {
         $this->setSynced(false);

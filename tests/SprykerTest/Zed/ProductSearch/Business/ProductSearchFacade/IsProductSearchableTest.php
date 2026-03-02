@@ -35,9 +35,6 @@ class IsProductSearchableTest extends Unit
      */
     protected $productSearchFacade;
 
-    /**
-     * @return void
-     */
     public function setUp(): void
     {
         parent::setUp();
@@ -45,9 +42,6 @@ class IsProductSearchableTest extends Unit
         $this->productSearchFacade = new ProductSearchFacade();
     }
 
-    /**
-     * @return void
-     */
     public function testProductAbstractIsSearchableShouldReturnTrueIfAnyVariantIsSearchable(): void
     {
         $productAbstractEntity = $this->createProductAbstract();
@@ -72,9 +66,6 @@ class IsProductSearchableTest extends Unit
         $this->assertTrue($isSearchable);
     }
 
-    /**
-     * @return void
-     */
     public function testProductAbstractIsSearchableShouldReturnFalseIfNoVariantIsSearchable(): void
     {
         $productAbstractEntity = $this->createProductAbstract();
@@ -92,9 +83,6 @@ class IsProductSearchableTest extends Unit
         $this->assertFalse($isSearchable);
     }
 
-    /**
-     * @return void
-     */
     public function testProductConcreteIsSearchableShouldReturnTrueIfSearchable(): void
     {
         $productAbstractEntity = $this->createProductAbstract();
@@ -108,9 +96,6 @@ class IsProductSearchableTest extends Unit
         $this->assertTrue($isSearchable);
     }
 
-    /**
-     * @return void
-     */
     public function testProductConcreteIsSearchableShouldReturnFalseIfNotSearchable(): void
     {
         $productAbstractEntity = $this->createProductAbstract();
@@ -124,9 +109,6 @@ class IsProductSearchableTest extends Unit
         $this->assertFalse($isSearchable);
     }
 
-    /**
-     * @return void
-     */
     public function testPersistProductSearchShouldSaveCorrectDataToDatabase(): void
     {
         $productAbstractEntity = $this->createProductAbstract();
@@ -157,9 +139,6 @@ class IsProductSearchableTest extends Unit
         $this->assertFalse($isSearchable2);
     }
 
-    /**
-     * @return \Orm\Zed\Product\Persistence\SpyProductAbstract
-     */
     protected function createProductAbstract(): SpyProductAbstract
     {
         $sku = uniqid('sku_');
@@ -176,11 +155,6 @@ class IsProductSearchableTest extends Unit
         return $productAbstractEntity;
     }
 
-    /**
-     * @param string $sku
-     *
-     * @return \Orm\Zed\Product\Persistence\SpyProduct
-     */
     protected function createProductConcrete(string $sku): SpyProduct
     {
         $productConcreteEntity = new SpyProduct();
@@ -191,11 +165,6 @@ class IsProductSearchableTest extends Unit
         return $productConcreteEntity;
     }
 
-    /**
-     * @param string $localeName
-     *
-     * @return \Generated\Shared\Transfer\LocaleTransfer
-     */
     protected function createLocale(string $localeName): LocaleTransfer
     {
         $localeEntity = SpyLocaleQuery::create()
@@ -209,13 +178,6 @@ class IsProductSearchableTest extends Unit
         return $localeTransfer;
     }
 
-    /**
-     * @param int $idProduct
-     * @param int $idLocale
-     * @param bool $isSearchable
-     *
-     * @return void
-     */
     protected function createProductSearchEntity(int $idProduct, int $idLocale, bool $isSearchable): void
     {
         $productSearchEntity = new SpyProductSearch();

@@ -9,10 +9,5 @@ namespace Spryker\Client\ProductSearch\Dependency\Client;
 
 interface ProductSearchToStorageClientInterface
 {
-    /**
-     * @param string $key
-     *
-     * @return mixed
-     */
     public function get(string $key): mixed;
 }

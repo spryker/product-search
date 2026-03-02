@@ -17,9 +17,6 @@ class ProductSearchConfigExtensionMarker implements ProductSearchConfigExtension
      */
     protected $touchFacade;
 
-    /**
-     * @param \Spryker\Zed\ProductSearch\Dependency\Facade\ProductSearchToTouchInterface $touchFacade
-     */
     public function __construct(ProductSearchToTouchInterface $touchFacade)
     {
         $this->touchFacade = $touchFacade;

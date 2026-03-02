@@ -35,11 +35,6 @@ interface ProductSearchRepositoryInterface
      */
     public function getAllProductAttributeKeys(): array;
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductSearchAttributeCriteriaTransfer $productSearchAttributeCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductSearchAttributeCollectionTransfer
-     */
     public function getProductSearchAttributeCollection(
         ProductSearchAttributeCriteriaTransfer $productSearchAttributeCriteriaTransfer
     ): ProductSearchAttributeCollectionTransfer;

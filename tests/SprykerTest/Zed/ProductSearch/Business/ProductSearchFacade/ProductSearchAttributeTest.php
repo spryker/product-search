@@ -25,9 +25,6 @@ use Orm\Zed\Touch\Persistence\SpyTouchQuery;
  */
 class ProductSearchAttributeTest extends AbstractProductSearchFacadeTest
 {
-    /**
-     * @return void
-     */
     public function testCreateProductSearchAttribute(): void
     {
         $productSearchAttributeTransfer = new ProductSearchAttributeTransfer();
@@ -42,9 +39,6 @@ class ProductSearchAttributeTest extends AbstractProductSearchFacadeTest
         $this->assertGreaterThan(0, $productSearchAttributeTransfer->getPosition(), 'Getting position failed!');
     }
 
-    /**
-     * @return void
-     */
     public function testUpdateProductSearchAttribute(): void
     {
         $productSearchAttributeEntity = $this->createProductSearchAttributeEntity(
@@ -65,9 +59,6 @@ class ProductSearchAttributeTest extends AbstractProductSearchFacadeTest
         $this->assertSame('bar', $productSearchAttributeTransfer->getFilterType());
     }
 
-    /**
-     * @return void
-     */
     public function testDeleteProductSearchAttribute(): void
     {
         $productSearchAttributeEntity = $this->createProductSearchAttributeEntity(
@@ -88,9 +79,6 @@ class ProductSearchAttributeTest extends AbstractProductSearchFacadeTest
         $this->assertSame(0, $count, 'Deletion failed!');
     }
 
-    /**
-     * @return void
-     */
     public function testGetProductSearchAttribute(): void
     {
         $productSearchAttributeEntity = $this->createProductSearchAttributeEntity(
@@ -105,9 +93,6 @@ class ProductSearchAttributeTest extends AbstractProductSearchFacadeTest
         $this->assertSame($productSearchAttributeEntity->getFilterType(), $productSearchAttributeTransfer->getFilterType());
     }
 
-    /**
-     * @return void
-     */
     public function testGetProductSearchAttributeList(): void
     {
         SpyProductSearchAttributeQuery::create()->deleteAll();
@@ -134,9 +119,6 @@ class ProductSearchAttributeTest extends AbstractProductSearchFacadeTest
         $this->assertCount(3, $productSearchAttributeList);
     }
 
-    /**
-     * @return void
-     */
     public function testUpdateProductSearchAttributeOrder(): void
     {
         $entity1 = $this->createProductSearchAttributeEntity(
@@ -183,9 +165,6 @@ class ProductSearchAttributeTest extends AbstractProductSearchFacadeTest
         );
     }
 
-    /**
-     * @return array
-     */
     public function touchProductAbstractByAsynchronousAttributesDataProvider(): array
     {
         return [
@@ -321,13 +300,6 @@ class ProductSearchAttributeTest extends AbstractProductSearchFacadeTest
         $this->assertSame(1, $touchCount, 'Failed to touch abstract product!');
     }
 
-    /**
-     * @param string $attributeKey
-     * @param \Generated\Shared\Transfer\ProductSearchAttributeTransfer $productSearchAttributeTransfer
-     * @param bool $synced
-     *
-     * @return \Orm\Zed\ProductSearch\Persistence\SpyProductSearchAttribute
-     */
     protected function createProductSearchAttributeEntity(
         string $attributeKey,
         ProductSearchAttributeTransfer $productSearchAttributeTransfer,

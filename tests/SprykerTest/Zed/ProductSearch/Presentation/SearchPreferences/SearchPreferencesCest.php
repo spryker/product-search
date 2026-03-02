@@ -23,22 +23,12 @@ use SprykerTest\Zed\ProductSearch\ProductSearchPresentationTester;
  */
 class SearchPreferencesCest
 {
-    /**
-     * @param \SprykerTest\Zed\ProductSearch\ProductSearchPresentationTester $i
-     *
-     * @return void
-     */
     public function _before(ProductSearchPresentationTester $i): void
     {
         $i->amZed();
         $i->amLoggedInUser();
     }
 
-    /**
-     * @param \SprykerTest\Zed\ProductSearch\ProductSearchPresentationTester $i
-     *
-     * @return void
-     */
     public function showListOfFilters(ProductSearchPresentationTester $i): void
     {
         $i->amOnPage(SearchPreferencesPage::URL_LIST);

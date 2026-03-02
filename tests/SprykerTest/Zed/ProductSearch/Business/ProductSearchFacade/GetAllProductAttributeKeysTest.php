@@ -29,9 +29,6 @@ class GetAllProductAttributeKeysTest extends Unit
      */
     protected ProductSearchBusinessTester $tester;
 
-    /**
-     * @return void
-     */
     public function testGetAllProductAttributeKeysShouldReturnAttributeKeys(): void
     {
         // Arrange

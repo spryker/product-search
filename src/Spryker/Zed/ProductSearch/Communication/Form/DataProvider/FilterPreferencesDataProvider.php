@@ -43,13 +43,6 @@ class FilterPreferencesDataProvider
      */
     protected $glossaryKeyBuilder;
 
-    /**
-     * @param \Spryker\Zed\ProductSearch\Persistence\ProductSearchQueryContainerInterface $productSearchQueryContainer
-     * @param \Spryker\Zed\ProductSearch\ProductSearchConfig $config
-     * @param \Spryker\Zed\ProductSearch\Dependency\Facade\ProductSearchToLocaleInterface $localeFacade
-     * @param \Spryker\Zed\ProductSearch\Dependency\Facade\ProductSearchToGlossaryInterface $glossaryFacade
-     * @param \Spryker\Shared\ProductSearch\Code\KeyBuilder\GlossaryKeyBuilderInterface $glossaryKeyBuilder
-     */
     public function __construct(
         ProductSearchQueryContainerInterface $productSearchQueryContainer,
         ProductSearchConfig $config,

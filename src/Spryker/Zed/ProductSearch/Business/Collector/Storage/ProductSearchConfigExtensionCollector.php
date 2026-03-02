@@ -34,12 +34,6 @@ class ProductSearchConfigExtensionCollector extends AbstractStoragePropelCollect
      */
     protected $keyBuilder;
 
-    /**
-     * @param \Spryker\Zed\ProductSearch\Business\Attribute\AttributeReaderInterface $attributeReader
-     * @param \Spryker\Zed\ProductSearch\ProductSearchConfig $productSearchConfig
-     * @param \Spryker\Shared\KeyBuilder\KeyBuilderInterface $keyBuilder
-     * @param \Spryker\Service\UtilDataReader\UtilDataReaderServiceInterface $utilDataReaderService
-     */
     public function __construct(
         AttributeReaderInterface $attributeReader,
         ProductSearchConfig $productSearchConfig,

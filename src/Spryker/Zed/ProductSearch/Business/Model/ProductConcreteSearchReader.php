@@ -19,11 +19,6 @@ class ProductConcreteSearchReader extends AbstractProductSearchReader implements
      */
     protected $productSearchRepository;
 
-    /**
-     * @param \Spryker\Zed\ProductSearch\Persistence\ProductSearchQueryContainerInterface $productSearchQueryContainer
-     * @param \Spryker\Zed\ProductSearch\Dependency\Facade\ProductSearchToLocaleInterface $localeFacade
-     * @param \Spryker\Zed\ProductSearch\Persistence\ProductSearchRepositoryInterface $productSearchRepository
-     */
     public function __construct(
         ProductSearchQueryContainerInterface $productSearchQueryContainer,
         ProductSearchToLocaleInterface $localeFacade,

@@ -68,9 +68,6 @@ class ProductSearchCommunicationFactory extends AbstractCommunicationFactory
         return $this->getFormFactory()->create(FilterPreferencesForm::class, $data, $options);
     }
 
-    /**
-     * @return \Symfony\Component\Form\FormInterface
-     */
     public function createCleanSearchPreferencesForm(): FormInterface
     {
         return $this->getFormFactory()->create(CleanSearchPreferencesForm::class, [], [
@@ -78,9 +75,6 @@ class ProductSearchCommunicationFactory extends AbstractCommunicationFactory
         ]);
     }
 
-    /**
-     * @return \Symfony\Component\Form\FormInterface
-     */
     public function createDeleteFilterPreferencesForm(): FormInterface
     {
         return $this->getFormFactory()->create(DeleteFilterPreferencesForm::class, [], [

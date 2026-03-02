@@ -22,11 +22,6 @@ use Propel\Runtime\Connection\ConnectionInterface;
  */
 abstract class AbstractSpyProductSearchAttribute extends BaseSpyProductSearchAttribute
 {
-    /**
-     * @param \Propel\Runtime\Connection\ConnectionInterface|null $con
-     *
-     * @return bool
-     */
     public function preInsert(?ConnectionInterface $con = null): bool
     {
         $this->presetPosition($con);
@@ -34,11 +29,6 @@ abstract class AbstractSpyProductSearchAttribute extends BaseSpyProductSearchAtt
         return parent::preInsert($con);
     }
 
-    /**
-     * @param \Propel\Runtime\Connection\ConnectionInterface|null $con
-     *
-     * @return bool
-     */
     public function preUpdate(?ConnectionInterface $con = null): bool
     {
         $this->setSynced(false);

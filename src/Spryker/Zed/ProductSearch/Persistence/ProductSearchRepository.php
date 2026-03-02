@@ -80,11 +80,6 @@ class ProductSearchRepository extends AbstractRepository implements ProductSearc
         return $allProductAttributeKeys;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductSearchAttributeCriteriaTransfer $productSearchAttributeCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductSearchAttributeCollectionTransfer
-     */
     public function getProductSearchAttributeCollection(
         ProductSearchAttributeCriteriaTransfer $productSearchAttributeCriteriaTransfer
     ): ProductSearchAttributeCollectionTransfer {
@@ -106,12 +101,6 @@ class ProductSearchRepository extends AbstractRepository implements ProductSearc
             );
     }
 
-    /**
-     * @param \Orm\Zed\ProductSearch\Persistence\SpyProductSearchAttributeQuery $productSearchAttributeQuery
-     * @param \Generated\Shared\Transfer\ProductSearchAttributeCriteriaTransfer $productSearchAttributeCriteriaTransfer
-     *
-     * @return \Orm\Zed\ProductSearch\Persistence\SpyProductSearchAttributeQuery
-     */
     protected function applyProductSearchAttributeFilters(
         SpyProductSearchAttributeQuery $productSearchAttributeQuery,
         ProductSearchAttributeCriteriaTransfer $productSearchAttributeCriteriaTransfer

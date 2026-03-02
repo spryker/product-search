@@ -29,11 +29,6 @@ class ProductSearchPresentationTester extends Actor
 {
     use _generated\ProductSearchPresentationTesterActions;
 
-    /**
-     * @param string $filterName
-     *
-     * @return int
-     */
     public function createFilter(string $filterName): int
     {
         $this->amOnPage(FilterPreferencesPage::URL_CREATE);
@@ -51,11 +46,6 @@ class ProductSearchPresentationTester extends Actor
         return $this->grabFromCurrentUrl($regexp);
     }
 
-    /**
-     * @param int $id
-     *
-     * @return void
-     */
     public function updateFilter(int $id): void
     {
         $this->amOnPage(FilterPreferencesPage::URL_VIEW . $id);
@@ -71,11 +61,6 @@ class ProductSearchPresentationTester extends Actor
         $this->canSeeCurrentUrlMatches('/' . preg_quote(FilterPreferencesPage::URL_VIEW, '/') . '(\d+)/');
     }
 
-    /**
-     * @param int $id
-     *
-     * @return void
-     */
     public function deleteFilter(int $id): void
     {
         $this->amOnPage(FilterPreferencesPage::URL_VIEW . $id);
@@ -87,11 +72,6 @@ class ProductSearchPresentationTester extends Actor
         $this->seeInPageSource('Filter successfully deleted.');
     }
 
-    /**
-     * @param string $attributeKey
-     *
-     * @return void
-     */
     public function addAttributeToSearch(string $attributeKey): void
     {
         $this->amOnPage(SearchPreferencesPage::URL_CREATE);
@@ -108,11 +88,6 @@ class ProductSearchPresentationTester extends Actor
         $this->seeInPageSource('Attribute to search was added successfully.');
     }
 
-    /**
-     * @param string $attributeKey
-     *
-     * @return void
-     */
     public function updateAttributeToSearch(string $attributeKey): void
     {
         $this->searchTableByAttributeKey($attributeKey);
@@ -133,11 +108,6 @@ class ProductSearchPresentationTester extends Actor
         $this->seeInPageSource('Attribute to search was successfully updated.');
     }
 
-    /**
-     * @param string $attributeKey
-     *
-     * @return void
-     */
     public function deactivateAttributeToSearch(string $attributeKey): void
     {
         $this->searchTableByAttributeKey($attributeKey);
@@ -150,11 +120,6 @@ class ProductSearchPresentationTester extends Actor
         $this->canSee('Attribute to search was successfully deactivated.');
     }
 
-    /**
-     * @param string $attributeKey
-     *
-     * @return void
-     */
     protected function searchTableByAttributeKey(string $attributeKey): void
     {
         $this->amOnPage(SearchPreferencesPage::URL_LIST);

@@ -16,9 +16,6 @@ class ProductSearchMarker implements ProductSearchMarkerInterface
      */
     protected $productSearchQueryContainer;
 
-    /**
-     * @param \Spryker\Zed\ProductSearch\Persistence\ProductSearchQueryContainerInterface $productSearchQuery
-     */
     public function __construct(ProductSearchQueryContainerInterface $productSearchQuery)
     {
         $this->productSearchQueryContainer = $productSearchQuery;

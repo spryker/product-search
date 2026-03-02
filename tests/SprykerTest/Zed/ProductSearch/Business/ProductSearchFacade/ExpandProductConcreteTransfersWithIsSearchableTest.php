@@ -35,9 +35,6 @@ class ExpandProductConcreteTransfersWithIsSearchableTest extends Unit
      */
     protected $productSearchFacade;
 
-    /**
-     * @return void
-     */
     public function setUp(): void
     {
         parent::setUp();
@@ -45,9 +42,6 @@ class ExpandProductConcreteTransfersWithIsSearchableTest extends Unit
         $this->productSearchFacade = new ProductSearchFacade();
     }
 
-    /**
-     * @return void
-     */
     public function testExpandProductConcreteTransfersWithIsSearchableSuccessful(): void
     {
         // Arrange
@@ -78,9 +72,6 @@ class ExpandProductConcreteTransfersWithIsSearchableTest extends Unit
         $this->assertFalse($productConcreteTransfers[1]->getLocalizedAttributes()[0]->getIsSearchableOrFail());
     }
 
-    /**
-     * @return \Orm\Zed\Product\Persistence\SpyProductAbstract
-     */
     protected function createProductAbstract(): SpyProductAbstract
     {
         $sku = uniqid('sku_');
@@ -97,11 +88,6 @@ class ExpandProductConcreteTransfersWithIsSearchableTest extends Unit
         return $productAbstractEntity;
     }
 
-    /**
-     * @param string $sku
-     *
-     * @return \Orm\Zed\Product\Persistence\SpyProduct
-     */
     protected function createProductConcrete(string $sku): SpyProduct
     {
         $productConcreteEntity = new SpyProduct();
@@ -112,11 +98,6 @@ class ExpandProductConcreteTransfersWithIsSearchableTest extends Unit
         return $productConcreteEntity;
     }
 
-    /**
-     * @param string $localeName
-     *
-     * @return \Generated\Shared\Transfer\LocaleTransfer
-     */
     protected function createLocale(string $localeName): LocaleTransfer
     {
         $localeEntity = SpyLocaleQuery::create()
@@ -130,13 +111,6 @@ class ExpandProductConcreteTransfersWithIsSearchableTest extends Unit
         return $localeTransfer;
     }
 
-    /**
-     * @param int $idProduct
-     * @param int $idLocale
-     * @param bool $isSearchable
-     *
-     * @return void
-     */
     protected function createProductSearchEntity(int $idProduct, int $idLocale, bool $isSearchable): void
     {
         $productSearchEntity = new SpyProductSearch();
@@ -148,12 +122,6 @@ class ExpandProductConcreteTransfersWithIsSearchableTest extends Unit
             ->save();
     }
 
-    /**
-     * @param \Orm\Zed\Product\Persistence\SpyProduct $productEntity
-     * @param \Generated\Shared\Transfer\LocaleTransfer $localeTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductConcreteTransfer
-     */
     protected function mapProductConcreteEntityToProductConcreteTransfers(SpyProduct $productEntity, LocaleTransfer $localeTransfer): ProductConcreteTransfer
     {
         return (new ProductConcreteTransfer())->fromArray($productEntity->toArray(), true)

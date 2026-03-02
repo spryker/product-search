@@ -30,10 +30,6 @@ class ProductSearchAttributeCollector implements ProductSearchAttributeMapCollec
      */
     protected static $attributeList;
 
-    /**
-     * @param \Spryker\Zed\ProductSearch\Business\Attribute\AttributeReaderInterface $attributeReader
-     * @param \Spryker\Zed\ProductSearch\ProductSearchConfig $productSearchConfig
-     */
     public function __construct(AttributeReaderInterface $attributeReader, ProductSearchConfig $productSearchConfig)
     {
         $this->attributeReader = $attributeReader;

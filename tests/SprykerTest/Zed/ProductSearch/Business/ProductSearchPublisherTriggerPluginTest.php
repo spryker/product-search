@@ -36,9 +36,6 @@ class ProductSearchPublisherTriggerPluginTest extends Unit
      */
     protected ProductSearchBusinessTester $tester;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -46,9 +43,6 @@ class ProductSearchPublisherTriggerPluginTest extends Unit
         $this->cleanupProductSearchEntities();
     }
 
-    /**
-     * @return void
-     */
     public function testPluginShouldReturnEntitiesWithinLimitAndOffset(): void
     {
         // Arrange
@@ -72,9 +66,6 @@ class ProductSearchPublisherTriggerPluginTest extends Unit
         $this->assertCount(3, $result);
     }
 
-    /**
-     * @return void
-     */
     public function testPluginShouldReturnEmptyArrayWhenNoEntitiesExist(): void
     {
         // Act
@@ -85,9 +76,6 @@ class ProductSearchPublisherTriggerPluginTest extends Unit
         $this->assertEmpty($result);
     }
 
-    /**
-     * @return void
-     */
     public function testPluginShouldReturnEmptyArrayWhenOffsetExceedsTotalCount(): void
     {
         // Arrange
@@ -112,9 +100,6 @@ class ProductSearchPublisherTriggerPluginTest extends Unit
         $this->assertEmpty($result);
     }
 
-    /**
-     * @return void
-     */
     public function testPluginShouldReturnCorrectDataStructure(): void
     {
         // Arrange
@@ -143,9 +128,6 @@ class ProductSearchPublisherTriggerPluginTest extends Unit
         $this->assertTrue($productSearchEntityTransfer->getIsSearchable());
     }
 
-    /**
-     * @return void
-     */
     public function testPluginShouldHandleZeroLimitAsUnlimited(): void
     {
         // Arrange
@@ -169,13 +151,6 @@ class ProductSearchPublisherTriggerPluginTest extends Unit
         $this->assertCount($totalCount, $result);
     }
 
-    /**
-     * @param int $idProduct
-     * @param int $idLocale
-     * @param bool $isSearchable
-     *
-     * @return void
-     */
     protected function createProductSearchEntity(int $idProduct, int $idLocale, bool $isSearchable): void
     {
         $productSearchEntity = new SpyProductSearch();
@@ -187,17 +162,11 @@ class ProductSearchPublisherTriggerPluginTest extends Unit
             ->save();
     }
 
-    /**
-     * @return void
-     */
     protected function cleanupProductSearchEntities(): void
     {
         SpyProductSearchQuery::create()->deleteAll();
     }
 
-    /**
-     * @return \Orm\Zed\Product\Persistence\SpyProductAbstract
-     */
     protected function createProductAbstract(): SpyProductAbstract
     {
         $sku = uniqid('sku_');
@@ -214,11 +183,6 @@ class ProductSearchPublisherTriggerPluginTest extends Unit
         return $productAbstractEntity;
     }
 
-    /**
-     * @param string $sku
-     *
-     * @return \Orm\Zed\Product\Persistence\SpyProduct
-     */
     protected function createProductConcrete(string $sku): SpyProduct
     {
         $productConcreteEntity = new SpyProduct();
@@ -229,11 +193,6 @@ class ProductSearchPublisherTriggerPluginTest extends Unit
         return $productConcreteEntity;
     }
 
-    /**
-     * @param string $localeName
-     *
-     * @return \Generated\Shared\Transfer\LocaleTransfer
-     */
     protected function createLocale(string $localeName): LocaleTransfer
     {
         $localeEntity = SpyLocaleQuery::create()

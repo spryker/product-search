@@ -26,9 +26,6 @@ use Orm\Zed\Touch\Persistence\SpyTouchQuery;
  */
 class ProductSearchAttributeMapTest extends AbstractProductSearchFacadeTest
 {
-    /**
-     * @return void
-     */
     public function testCreateProductSearchPreferences(): void
     {
         $productSearchPreferencesTransfer = new ProductSearchPreferencesTransfer();
@@ -46,9 +43,6 @@ class ProductSearchAttributeMapTest extends AbstractProductSearchFacadeTest
         $this->assertSame(2, $count);
     }
 
-    /**
-     * @return void
-     */
     public function testUpdateProductSearchPreferences(): void
     {
         $productSearchAttributeMapEntity = $this->createProductSearchAttributeMapEntity('updateProductSearchPreferences');
@@ -69,9 +63,6 @@ class ProductSearchAttributeMapTest extends AbstractProductSearchFacadeTest
         $this->assertSame(2, $count);
     }
 
-    /**
-     * @return void
-     */
     public function testCleanProductSearchPreferences(): void
     {
         $productSearchAttributeMapEntity = $this->createProductSearchAttributeMapEntity('cleanProductSearchPreferences');
@@ -89,9 +80,6 @@ class ProductSearchAttributeMapTest extends AbstractProductSearchFacadeTest
         $this->assertSame(0, $count);
     }
 
-    /**
-     * @return void
-     */
     public function testSuggestProductSearchAttributes(): void
     {
         // Arrange
@@ -106,9 +94,6 @@ class ProductSearchAttributeMapTest extends AbstractProductSearchFacadeTest
         $this->assertContains($key, $suggestedAttributes);
     }
 
-    /**
-     * @return array
-     */
     public function touchProductAbstractByAsynchronousAttributesDataProvider(): array
     {
         return [
@@ -227,12 +212,6 @@ class ProductSearchAttributeMapTest extends AbstractProductSearchFacadeTest
         $this->assertSame(1, $touchCount, 'Failed to touch abstract product!');
     }
 
-    /**
-     * @param string $attributeKey
-     * @param bool $synced
-     *
-     * @return \Orm\Zed\ProductSearch\Persistence\SpyProductSearchAttributeMap
-     */
     protected function createProductSearchAttributeMapEntity(string $attributeKey, bool $synced = false): SpyProductSearchAttributeMap
     {
         $productAttributeKeyEntity = $this->createProductAttributeKeyEntity($attributeKey);

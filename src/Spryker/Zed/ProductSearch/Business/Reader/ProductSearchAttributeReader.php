@@ -24,10 +24,6 @@ class ProductSearchAttributeReader implements ProductSearchAttributeReaderInterf
      */
     protected LocalizedProductSearchAttributeKeyExpanderInterface $localizedProductSearchAttributeKeyExpander;
 
-    /**
-     * @param \Spryker\Zed\ProductSearch\Persistence\ProductSearchRepositoryInterface $productSearchRepository
-     * @param \Spryker\Zed\ProductSearch\Business\Expander\LocalizedProductSearchAttributeKeyExpanderInterface $localizedProductSearchAttributeKeyExpander
-     */
     public function __construct(
         ProductSearchRepositoryInterface $productSearchRepository,
         LocalizedProductSearchAttributeKeyExpanderInterface $localizedProductSearchAttributeKeyExpander
@@ -36,11 +32,6 @@ class ProductSearchAttributeReader implements ProductSearchAttributeReaderInterf
         $this->localizedProductSearchAttributeKeyExpander = $localizedProductSearchAttributeKeyExpander;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductSearchAttributeCriteriaTransfer $productSearchAttributeCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductSearchAttributeCollectionTransfer
-     */
     public function getProductSearchAttributeCollection(
         ProductSearchAttributeCriteriaTransfer $productSearchAttributeCriteriaTransfer
     ): ProductSearchAttributeCollectionTransfer {

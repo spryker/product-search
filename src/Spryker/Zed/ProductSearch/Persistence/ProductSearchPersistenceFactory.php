@@ -89,9 +89,6 @@ class ProductSearchPersistenceFactory extends AbstractPersistenceFactory
         return SpyProductAbstractQuery::create();
     }
 
-    /**
-     * @return \Spryker\Zed\ProductSearch\Persistence\Propel\Mapper\ProductSearchAttributeMapper
-     */
     public function createProductSearchAttributeMapper(): ProductSearchAttributeMapper
     {
         return new ProductSearchAttributeMapper();

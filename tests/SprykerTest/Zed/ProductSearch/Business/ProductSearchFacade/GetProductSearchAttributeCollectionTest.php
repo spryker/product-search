@@ -39,9 +39,6 @@ class GetProductSearchAttributeCollectionTest extends Unit
      */
     protected ProductSearchBusinessTester $tester;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -49,9 +46,6 @@ class GetProductSearchAttributeCollectionTest extends Unit
         $this->tester->ensureProductAttributeKeyTableIsEmpty();
     }
 
-    /**
-     * @return void
-     */
     public function testShouldReturnEmptyCollection(): void
     {
         // Arrange
@@ -68,9 +62,6 @@ class GetProductSearchAttributeCollectionTest extends Unit
         $this->assertCount(0, $productSearchAttributeCollectionTransfer->getProductSearchAttributes());
     }
 
-    /**
-     * @return void
-     */
     public function testShouldReturnCollectionByIds(): void
     {
         // Arrange
@@ -97,9 +88,6 @@ class GetProductSearchAttributeCollectionTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testShouldReturnCollectionSortedByFieldAsc(): void
     {
         // Arrange
@@ -141,9 +129,6 @@ class GetProductSearchAttributeCollectionTest extends Unit
         }
     }
 
-    /**
-     * @return void
-     */
     public function testShouldReturnCollectionSortedByFieldDesc(): void
     {
         // Arrange
@@ -188,9 +173,6 @@ class GetProductSearchAttributeCollectionTest extends Unit
         }
     }
 
-    /**
-     * @return void
-     */
     public function testShouldReturnCollectionWithLocalizedAttributes(): void
     {
         // Arrange

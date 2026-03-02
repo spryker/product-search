@@ -23,25 +23,16 @@ class ProductSearchFactory extends AbstractFactory
         return new ProductSearchConfigExtensionKeyBuilder();
     }
 
-    /**
-     * @return \Spryker\Client\ProductSearch\Dependency\Client\ProductSearchToStorageClientInterface
-     */
     public function getStorageClient(): ProductSearchToStorageClientInterface
     {
         return $this->getProvidedDependency(ProductSearchDependencyProvider::CLIENT_STORAGE);
     }
 
-    /**
-     * @return \Spryker\Client\ProductSearch\Dependency\Client\ProductSearchToStoreClientInterface
-     */
     public function getStoreClient(): ProductSearchToStoreClientInterface
     {
         return $this->getProvidedDependency(ProductSearchDependencyProvider::CLIENT_STORE);
     }
 
-    /**
-     * @return \Spryker\Client\ProductSearch\Dependency\Client\ProductSearchToLocaleClientInterface
-     */
     public function getLocaleClient(): ProductSearchToLocaleClientInterface
     {
         return $this->getProvidedDependency(ProductSearchDependencyProvider::CLIENT_LOCALE);

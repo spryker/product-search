@@ -69,9 +69,6 @@ class ProductSearchBusinessFactory extends AbstractBusinessFactory
         return new ProductSearchAttributeMapper($this->getAttributeMapCollectors());
     }
 
-    /**
-     * @return \Spryker\Zed\ProductSearch\Business\Expander\LocalizedProductSearchAttributeKeyExpanderInterface
-     */
     public function createLocalizedProductSearchAttributeKeyExpander(): LocalizedProductSearchAttributeKeyExpanderInterface
     {
         return new LocalizedProductSearchAttributeKeyExpander(
@@ -81,9 +78,6 @@ class ProductSearchBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ProductSearch\Business\Reader\ProductSearchAttributeReaderInterface
-     */
     public function createProductSearchAttributeReader(): ProductSearchAttributeReaderInterface
     {
         return new ProductSearchAttributeReader(
@@ -339,9 +333,6 @@ class ProductSearchBusinessFactory extends AbstractBusinessFactory
         return $this->getProvidedDependency(ProductSearchDependencyProvider::FACADE_EVENT);
     }
 
-    /**
-     * @return \Spryker\Zed\ProductSearch\Business\Collector\ProductSearchCollectorRunnerInterface
-     */
     public function createProductSearchConfigExtensionCollectorRunner(): ProductSearchCollectorRunnerInterface
     {
         return new ProductSearchCollectorRunner(
