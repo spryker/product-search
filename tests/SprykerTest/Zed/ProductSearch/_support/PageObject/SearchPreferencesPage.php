@@ -27,7 +27,7 @@ class SearchPreferencesPage
     /**
      * @var string
      */
-    public const SELECTOR_SEARCH_PREFERENCES_LIST = '.dataTables_wrapper';
+    public const SELECTOR_SEARCH_PREFERENCES_LIST = '.dt-container';
 
     /**
      * @var string
@@ -82,5 +82,5 @@ class SearchPreferencesPage
     /**
      * @var string
      */
-    public const SELECTOR_TABLE_SEARCH = '.dataTables_filter input[type="search"]';
+    public const SELECTOR_TABLE_SEARCH = 'input#dt-search-0';
 }

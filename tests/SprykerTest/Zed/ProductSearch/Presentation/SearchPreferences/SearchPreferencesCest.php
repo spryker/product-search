@@ -64,7 +64,7 @@ class SearchPreferencesCest
 
         $i->amOnPage(SearchPreferencesPage::URL_LIST);
 
-        $i->waitForElementVisible('.dataTables_scrollBody');
+        $i->waitForElementVisible('.dt-container');
 
         $i->click('#syncSearchPreferences');
 

@@ -32,7 +32,7 @@ class FilterPreferencesPage
     /**
      * @var string
      */
-    public const SELECTOR_FILTER_LIST = '.dataTables_wrapper';
+    public const SELECTOR_FILTER_LIST = '.dt-container';
 
     /**
      * @var string
@@ -42,7 +42,7 @@ class FilterPreferencesPage
     /**
      * @var string
      */
-    public const SELECTOR_ORDER_SAVE_ALERT = '.sweet-alert > h2';
+    public const SELECTOR_ORDER_SAVE_ALERT = '.swal2-title';
 
     /**
      * @var string
@@ -77,7 +77,7 @@ class FilterPreferencesPage
     /**
      * @var string
      */
-    public const SELECTOR_BUTTON_EDIT = '.title-action > .btn-edit';
+    public const SELECTOR_BUTTON_EDIT = '*[data-qa="title-action"] > .btn-edit';
 
     /**
      * @var string
