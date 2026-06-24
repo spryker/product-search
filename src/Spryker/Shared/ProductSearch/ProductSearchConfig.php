@@ -12,18 +12,27 @@ use Spryker\Shared\Product\ProductConfig;
 interface ProductSearchConfig
 {
     /**
+     * @api
+     *
      * @var string
      */
     public const PRODUCT_SEARCH_FILTER_GLOSSARY_PREFIX = 'product.filter.';
 
+    /**
+     * @api
+     */
     public const RESOURCE_TYPE_PRODUCT_ABSTRACT = ProductConfig::RESOURCE_TYPE_PRODUCT_ABSTRACT;
 
     /**
+     * @api
+     *
      * @var string
      */
     public const RESOURCE_TYPE_PRODUCT_SEARCH_CONFIG_EXTENSION = 'product_search_config_extension';
 
     /**
+     * @api
+     *
      * @var int
      */
     public const PRODUCT_SEARCH_CONFIG_EXPANDER_RESOURCE_ID = 1;
