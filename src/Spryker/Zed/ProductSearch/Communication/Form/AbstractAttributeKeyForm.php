@@ -96,14 +96,14 @@ abstract class AbstractAttributeKeyForm extends AbstractType
                 'message' => 'This field contains illegal characters. It should contain only lower case letters, ' .
                     'digits, numbers, underscores ("_"), hyphens ("-") and colons (":").',
             ]),
-            new Callback([
-                'callback' => function ($key, ExecutionContextInterface $context) {
+            new Callback(
+                callback: function ($key, ExecutionContextInterface $context) {
                     if (!$this->isUniqueKey($key)) {
                         $context->addViolation('Attribute key is already used');
                     }
                 },
-                'groups' => [static::GROUP_UNIQUE_KEY],
-            ]),
+                groups: [static::GROUP_UNIQUE_KEY],
+            ),
         ];
     }
 }
